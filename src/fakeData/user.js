@@ -1,4 +1,4 @@
-[{
+var userData =[{
     "id": 1,
     "name": "Phylys Ibanez",
     "email": "pibanez0@mysql.com",
@@ -134,3 +134,5 @@
     "salary": 30768,
     "phone": "418-232-1224"
   }]
+
+  export default userData;
