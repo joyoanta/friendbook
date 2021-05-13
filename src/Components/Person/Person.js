@@ -1,11 +1,15 @@
 import React from 'react';
 import './Person.css';
-import logo from '../../images/logo.png';
+
 
 const Person = (props) => {
 
-    const { name, email, gender, phone, salary, picture, address } = props.user;
+    const { name, email, gender, phone, salary, picture, address } = props.info;
+    
+    {
 
+        // console.log(props.info)
+    }
 
     return (
         <div>
@@ -25,7 +29,7 @@ const Person = (props) => {
                     <p>Gender: {gender}</p>
                     <p>Phone: {phone}</p>
                     <p>Address: {address}</p>
-                    <button>Add Me Friend</button>
+                    <button onClick={()=>(props.handleAddfriend(props.info))} >Add Me Friend</button>
 
                 </div>
 

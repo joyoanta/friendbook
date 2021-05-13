@@ -1,33 +1,44 @@
 import React, { useState } from 'react';
 import './Users.css';
 import Person from '../Person/Person';
-import fakedata from '../../fakeData/user';
+import fakeData from '../../fakeData/fakeuser';
+import Salery from '../Salary/Salery';
 
 const Users = () => {
 
-    const [user, setUser] = useState(fakedata)
 
-{
+    const [user, setUser] = useState(fakeData);
 
-    console.log(fakedata);
-}
+    const handleAddfriend = (info)=> {
+
+       
+        console.log('Friend added', info);
+        const newcart = [...cart, info]
+        setCart(newcart)
+
+    }
+    
+    const [cart, setCart] = useState([]);
+
+
    
     return (
         <div className="book-container">
             <div className='user-container'>
                 
-                
+        
+
              {
-
-             user.map(info=> <Person user={info}></Person>)
+             user.map(info=> <Person handleAddfriend={handleAddfriend} info={info} key={info.id} ></Person>)
              }
-
-               
-
 
                 
                 </div>
-            <div className='cart-container'>This is Salery part</div>
+                <div className='cart-container'>
+
+                <Salery cart={cart}></Salery>
+
+            </div>
         </div>
     );
 };

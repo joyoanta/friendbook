@@ -1,0 +1,19 @@
+.cart-section{
+
+    text-align: center;
+    font-weight: 700;
+    color: rgb(240, 113, 28);
+    /* border: 3px solid black; */
+}
+
+.friend-container{
+
+   text-align: left;
+
+}
+
+.review-button{
+
+    padding: 5px;
+    width: 300px;
+}
